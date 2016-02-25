@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ExamplesOf_intent</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="btn_sayac">Sayaç Kur</string>
+    <string name="btn_takvim">Etkinlik Oluştur</string>
+    <string name="btn_fotocektext"> Foto Çek Döndür</string>
+</resources>
+
+
+

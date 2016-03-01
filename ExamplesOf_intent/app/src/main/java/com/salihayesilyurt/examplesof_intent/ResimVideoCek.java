@@ -15,6 +15,9 @@ import java.io.IOException;
 
 /**
  * Created by SalihaYesilyurt on 25.2.2016.
+ * Kaynaklar: https://developer.android.com/training/camera/photobasics.html#TaskCaptureIntent
+ * https://guides.codepath.com/android/Accessing-the-Camera-and-Stored-Media
+ *
  */
 public class ResimVideoCek implements View.OnClickListener {
 
@@ -68,11 +71,12 @@ public class ResimVideoCek implements View.OnClickListener {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        finally {
+       /* finally {
             return null;
             //En son null döndüyoruz kod derlesin diye
 
-        }
+        }*/
+        return null;
     }
 
     public int getKod (){

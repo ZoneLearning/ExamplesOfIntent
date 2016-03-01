@@ -1,10 +1,10 @@
 package com.salihayesilyurt.examplesof_intent;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private EditText etHour;
     private EditText etMinute;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnResimVideoCek;
 
     private ImageView img;
-    private Button btnResimCek;
+    //private Button btnResimCek;
     private ResimVideoCek resimVideoCek;
 
     @Override
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btnSayac = (Button) findViewById(R.id.btn_sayac);
         btnEtkinlikOlustur = (Button) findViewById(R.id.btn_etkinlikolustur);
         btnResimVideoCek = (Button) findViewById(R.id.btnFotoVideo);
-        btnResimCek = (Button) findViewById(R.id.btnFotoVideo);
+        //btnResimCek = (Button) findViewById(R.id.btnFotoVideo);
         img = (ImageView) findViewById(R.id.imgFotoVideo);
     }
 
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             Bitmap thump = null;
             try {
                 thump = MediaStore.Images.Media.getBitmap(getContentResolver(), resimVideoCek.getUri());
+
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {

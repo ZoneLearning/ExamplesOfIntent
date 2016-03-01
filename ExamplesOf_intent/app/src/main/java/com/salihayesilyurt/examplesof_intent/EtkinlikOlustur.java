@@ -45,7 +45,7 @@ public class EtkinlikOlustur implements View.OnClickListener {
         GregorianCalendar callDate = new GregorianCalendar(yil,ay,gun);
         callIntent.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY,true);
         callIntent.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,callDate.getTimeInMillis());
-        callIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, callDate.getTimeInMillis());
+        callIntent.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, callDate.getTimeInMillis()*5);
         con.startActivity(callIntent);
     }
 }
